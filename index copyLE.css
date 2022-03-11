@@ -1,0 +1,743 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+body {
+  background-color: #0e0e0e;
+  background-repeat: no-repeat;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  font-family: "Poppins", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  text-rendering: optimizeLegibility;
+  text-decoration: none;
+}
+
+@-webkit-keyframes swipeFromRight {
+  from {
+    -webkit-transform: translateX(250px);
+            transform: translateX(250px);
+  }
+  to {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@keyframes swipeFromRight {
+  from {
+    -webkit-transform: translateX(250px);
+            transform: translateX(250px);
+  }
+  to {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@-webkit-keyframes swipeFromLeft {
+  from {
+    -webkit-transform: translateX(-300px);
+            transform: translateX(-300px);
+  }
+  to {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@keyframes swipeFromLeft {
+  from {
+    -webkit-transform: translateX(-300px);
+            transform: translateX(-300px);
+  }
+  to {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    font-size: 7rem;
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    font-size: 7rem;
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes introLoad {
+  from {
+    display: none;
+    -webkit-transform: translateY(100px);
+            transform: translateY(100px);
+  }
+  to {
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes introLoad {
+  from {
+    display: none;
+    -webkit-transform: translateY(100px);
+            transform: translateY(100px);
+  }
+  to {
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+.active {
+  color: white;
+}
+
+.container {
+  position: absolute;
+  margin: 0 auto;
+  top: 0;
+  width: 100%;
+}
+
+.container header nav {
+  -webkit-animation: swipeFromLeft 1s ease-out;
+          animation: swipeFromLeft 1s ease-out;
+  -webkit-transition: 2s;
+  transition: 2s;
+  background-color: rgba(12, 12, 12, 0.971);
+  top: 0;
+  z-index: 999;
+  position: fixed;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-family: "Poppins", "Consolas", sans-serif;
+  width: 100%;
+  padding: 1.5rem 10vw;
+}
+
+.container header nav a h1 {
+  margin: 0 1rem;
+  color: white;
+  font-size: 2rem;
+  font-weight: normal;
+}
+
+.container header nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+}
+
+.container header nav ul li {
+  text-transform: uppercase;
+  font-size: 1.3rem;
+  margin: auto 0.1rem;
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+}
+
+.container header nav ul li .btn {
+  margin: 0rem 0.834rem;
+  -webkit-transition: 0.4s ease-out;
+  transition: 0.4s ease-out;
+  color: rgba(255, 255, 255, 0.493);
+}
+
+.container header nav ul li .active,
+.container header nav ul li .btn:hover {
+  -webkit-transition: 0.2s ease-in;
+  transition: 0.2s ease-in;
+  color: white;
+}
+
+.container header nav img {
+  display: block;
+  float: right;
+}
+
+.container header main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  padding: 1rem;
+  margin: 15vw;
+  max-width: 70%;
+}
+
+.container header main .text {
+  width: 100%;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  padding: 1rem;
+  -webkit-animation: swipeFromRight 1s ease-out;
+          animation: swipeFromRight 1s ease-out;
+}
+
+.container header main .text h1 {
+  font-size: 3.4vw;
+  -webkit-animation: fadeIn 0.6s ease-in;
+          animation: fadeIn 0.6s ease-in;
+  color: white;
+  line-height: 1.4;
+}
+
+.container header main .text h1 span {
+  color: #470020;
+}
+
+.container header main .btn-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  margin: 3rem 0;
+  -webkit-animation: fadeIn 1s ease-in;
+          animation: fadeIn 1s ease-in;
+}
+
+.container header main .btn-container .important {
+  color: black;
+  background-color: white;
+}
+
+.container header main .btn-container a {
+  z-index: 2;
+  -webkit-animation: swipeFromLeft 0.5s ease-in;
+          animation: swipeFromLeft 0.5s ease-in;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  color: #cfcfcf;
+  margin: 0 0.5rem;
+  border: solid 0.01rem #470020;
+  padding: 0.5rem 1.2rem;
+  font-size: 1vw;
+  text-transform: uppercase;
+  letter-spacing: 0.5rem;
+}
+
+.container header main .btn-container a:hover {
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  color: white;
+  background-color: #470020;
+  -webkit-transition: opacity 0.2s, border 0.3s;
+  transition: opacity 0.2s, border 0.3s;
+}
+
+.container section aside {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  padding: 1rem;
+  margin: 15vw;
+  max-width: 50%;
+}
+
+.container section aside .text {
+  width: 100%;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  padding: 10rem 1rem;
+  -webkit-animation: swipeFromRight 1s ease-out;
+          animation: swipeFromRight 1s ease-out;
+}
+
+.container section aside .text h2 {
+  font-size: 3vw;
+  -webkit-animation: fadeIn 0.6s ease-in;
+          animation: fadeIn 0.6s ease-in;
+  font-weight: normal;
+  color: white;
+  line-height: 0.9;
+}
+
+.container section aside .text h2 span {
+  color: #470020;
+}
+
+.container section aside .text p {
+  margin: 1rem 0;
+  color: #f3f3f3;
+  padding: 1rem 0rem;
+  font-size: 1.3vw;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.container section aside .text p i {
+  color: #f3f3f3;
+  font-size: 4rem;
+  margin: 2.4rem 0.3rem;
+}
+
+.container section article {
+  display: block;
+  padding: 1rem;
+  margin: 15vw;
+  max-width: 100%;
+}
+
+.container section article .text {
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  padding: 1rem 0;
+  -webkit-animation: swipeFromRight 1s ease-out;
+          animation: swipeFromRight 1s ease-out;
+}
+
+.container section article .text h2 {
+  font-size: 4rem;
+  -webkit-animation: fadeIn 0.6s ease-in;
+          animation: fadeIn 0.6s ease-in;
+  font-weight: normal;
+  color: #e7e7e7;
+  line-height: 1.1;
+}
+
+.container section article .text span {
+  color: #470020;
+}
+
+.container section article .card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  padding: 1rem;
+  -webkit-animation: swipeFromRight 1s ease-out;
+          animation: swipeFromRight 1s ease-out;
+  background-color: rgba(0, 0, 0, 0.267);
+  border: solid 0.1rem white;
+  margin: 3rem auto;
+}
+
+.container section article .card .info {
+  padding: 1rem;
+  max-width: 50%;
+}
+
+.container section article .card .info h1 {
+  padding: 0.4rem;
+  font-size: 2.5rem;
+  color: #eeeeee !important;
+}
+
+.container section article .card .info p {
+  padding: 0.5rem;
+  font-size: 1.2rem;
+  color: #cccccc;
+}
+
+.container section article .card .info .technologies-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  padding: 0.5rem;
+}
+
+.container section article .card .info .technologies-container i {
+  color: white;
+  font-size: 3rem;
+  margin: 0 0.5rem;
+}
+
+.container section article .card .info .btn-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-animation: fadeIn 1s ease-in;
+          animation: fadeIn 1s ease-in;
+}
+
+.container section article .card .info .btn-container a {
+  -webkit-animation: swipeFromLeft 0.5s ease-in;
+          animation: swipeFromLeft 0.5s ease-in;
+  color: #cfcfcf;
+  margin: 0 0.5rem;
+  border: solid 0.01rem #470020;
+  padding: 0.5rem 1.2rem;
+  font-size: 1vw;
+  text-transform: uppercase;
+  letter-spacing: 0.4rem;
+}
+
+.container section article .card .info .btn-container a:hover {
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  color: white;
+  background-color: #470020;
+  -webkit-transition: opacity 0.2s, border 0.3s;
+  transition: opacity 0.2s, border 0.3s;
+}
+
+.container section article .card .img {
+  padding: 1rem;
+  max-width: 50%;
+}
+
+.container section article .card .img img {
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.container section footer {
+  display: block;
+  padding: 1rem;
+  margin: 15vw;
+  max-width: 100%;
+}
+
+.container section footer .text {
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  padding: 1rem;
+  -webkit-animation: swipeFromRight 1s ease-out;
+          animation: swipeFromRight 1s ease-out;
+}
+
+.container section footer .text h2 {
+  font-size: 2.7vw;
+  -webkit-animation: fadeIn 0.6s ease-in;
+          animation: fadeIn 0.6s ease-in;
+  font-weight: normal;
+  color: #e7e7e7;
+}
+
+.container section footer .text span {
+  color: #470020;
+}
+
+.container section footer form {
+  max-width: 40%;
+  padding: 0 1rem;
+}
+
+.container section footer form .form-container {
+  display: block;
+}
+
+.container section footer form .form-container h3 {
+  color: white;
+  font-weight: normal;
+  font-size: 1.7rem;
+}
+
+.container section footer form .form-container input {
+  margin: 1rem 0;
+  background-color: transparent;
+  padding: 1rem 1rem;
+  border: solid 0.01rem #470020;
+  color: white;
+  font-size: 1.2rem;
+  width: 30rem;
+}
+
+.container section footer form .form-container textarea {
+  font-family: "Consolas", sans-serif;
+  height: 10rem;
+  border: solid 0.01rem #470020;
+  color: white;
+  background-color: transparent;
+  font-size: 1.2rem;
+  width: 30rem;
+  padding: 0.5rem;
+}
+
+.container section footer form .form-container input[name="submit"] {
+  font-family: "Poppins", sans-serif;
+  width: 30rem;
+  padding: 0.5rem 1rem;
+  border: solid 0.01rem #470020;
+  text-transform: uppercase;
+  letter-spacing: 0.4rem;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  color: black;
+  background-color: white;
+}
+
+.container section footer form .form-container input[name="submit"]:hover {
+  background-color: #470020;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  color: #ffffff;
+}
+
+.container section footer .links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 0 1rem;
+}
+
+.container section footer .links i {
+  margin: 1rem 0.8rem;
+  color: white;
+  font-size: 2.5rem;
+}
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+  outline: none;
+}
+
+@media screen and (max-width: 1200px) {
+  body {
+    -webkit-transition: all 0.2s;
+    transition: all 0.2s;
+  }
+  .container header main .text h1 {
+    font-size: 5.5vw;
+  }
+  .container header main .btn-container a {
+    font-size: 2vw;
+  }
+  .container section aside .text h2 {
+    font-size: 5vw;
+  }
+  .container section aside .text p {
+    font-size: 2.5vw;
+  }
+  .container section article .card {
+    display: block;
+    padding: 0;
+    width: 100%;
+  }
+  .container section article .card .info {
+    max-width: 100%;
+  }
+  .container section article .card .info p {
+    font-size: 1.4rem;
+  }
+  .container section article .card .info .technologies-container {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  .container section article .card .info .btn-container {
+    margin: 1rem 0;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  .container section article .card .img {
+    max-width: 100%;
+  }
+  .container section footer {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  body {
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+  }
+  .container {
+    padding: 0;
+    margin: 0;
+  }
+  .container header nav ul {
+    display: none;
+  }
+  .container header nav img {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  body {
+    -webkit-transition: all 0.2s;
+    transition: all 0.2s;
+  }
+  .container header nav {
+    padding: 3.5vw 1vw;
+  }
+  .container header nav a h1 {
+    font-size: 5vw;
+  }
+  .container header main {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding: 1rem 0;
+    margin: 15vw 1rem;
+  }
+  .container header main .text {
+    padding: 0;
+  }
+  .container header main .text h1 {
+    font-weight: normal;
+    text-align: left;
+    font-size: 8vw;
+  }
+  .container header main .btn-container {
+    margin: 1rem 0;
+    -webkit-box-pack: flexstart;
+        -ms-flex-pack: flexstart;
+            justify-content: flexstart;
+  }
+  .container header main .btn-container a {
+    font-size: 3.5vw;
+    margin: 0 0.3rem;
+    padding: 1.5vw 4vw;
+  }
+  .container section aside {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding: 1rem 0;
+    max-width: inherit;
+    margin: 15vw 1rem;
+  }
+  .container section aside .text {
+    padding: 0;
+  }
+  .container section aside .text h2 {
+    font-size: 8vw;
+    font-weight: normal;
+    line-height: 1.25;
+  }
+  .container section aside .text p {
+    font-size: 5vw;
+    text-align: left;
+    font-weight: normal;
+  }
+  .container section aside .text p i {
+    font-size: 3rem;
+  }
+  .container section article {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding: 1rem 0;
+    margin: 15vw 1rem;
+  }
+  .container section article .text {
+    padding: 0;
+  }
+  .container section article .text h2 {
+    font-size: 8vw;
+    font-weight: normal;
+    line-height: 1.25;
+  }
+  .container section article .card {
+    padding: 0;
+  }
+  .container section article .card .info {
+    padding: 1rem;
+  }
+  .container section article .card .info h1 {
+    padding: 0;
+    font-size: 9vw;
+    text-align: left;
+    font-weight: normal;
+  }
+  .container section article .card .info p {
+    font-size: 4vw;
+  }
+  .container section article .card .info .btn-container {
+    margin: 2rem auto;
+  }
+  .container section article .card .info .btn-container a {
+    margin: 0 0.5vw;
+    padding: 2vw 5vw;
+    font-size: 4vw;
+    letter-spacing: 0.3;
+  }
+  .container section article .card img {
+    width: 100%;
+  }
+  .container section footer {
+    padding: 1rem 0;
+    margin: 15vw 1rem;
+  }
+  .container section footer .text {
+    padding: 0;
+  }
+  .container section footer .text h2 {
+    font-size: 8vw;
+  }
+  .container section footer form {
+    max-width: 100%;
+    padding: 0;
+  }
+  .container section footer form .form-container h3 {
+    font-size: 6vw;
+  }
+  .container section footer form .form-container input {
+    width: 100%;
+  }
+  .container section footer form .form-container textarea {
+    width: 100%;
+  }
+  .container section footer form .form-container input[name="submit"] {
+    width: 100%;
+  }
+}
+/*# sourceMappingURL=index.css.map */
